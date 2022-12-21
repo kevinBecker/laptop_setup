@@ -1,0 +1,111 @@
+
+#---------------------------------
+# MOOS IVP Path variables
+#---------------------------------
+PATH=$PATH:~/moos-ivp/bin
+PATH=$PATH:~/moos-ivp/scripts
+PATH=$PATH:~/moos-ivp-kevin00/bin
+PATH=$PATH:~/moos-ivp-swarm/trunk/bin
+PATH=$PATH:~/moos-ivp-pavlab/bin
+PATH=$PATH:~/moos-ivp-gazebo/bin
+export PATH
+
+#---------------------------------
+#MOOS IVP Other Vars
+#---------------------------------
+IVP_IMAGE_DIRS=~/pavlab_map_images/mit
+IVP_IMAGE_DIRS+=:~/pavlab_map_images/popolopen
+IVP_IMAGE_DIRS+=:~/pavlab_map_images/sydney_regatta
+IVP_IMAGE_DIRS+=:~/pavlab_map_images/oak_island
+export IVP_IMAGE_DIRS
+
+source "$HOME/pavlab_shorts/setup_pavlab_shorts"
+
+
+
+
+#---------------------------------
+# SSH Shortcuts for Heron Work
+#---------------------------------
+
+alias ssha='ssh -l student2680 192.168.14.100'
+alias sshb='ssh -l student2680 192.168.15.100'
+alias sshc='ssh -l student2680 192.168.16.100'
+alias sshd='ssh -l student2680 192.168.17.100'
+alias sshe='ssh -l student2680 192.168.18.100'
+alias sshf='ssh -l student2680 192.168.19.100'
+alias sshm='ssh -l student2680 192.168.20.100'
+alias sshn='ssh -l student2680 192.168.21.100'
+alias ssho='ssh -l student2680 192.168.22.100'
+
+alias sshaf='ssh -l administrator 192.168.1.173'
+alias sshbf='ssh -l administrator 192.168.1.174'
+alias sshcf='ssh -l administrator 192.168.1.169'
+alias sshdf='ssh -l administrator 192.168.1.168'
+alias sshef='ssh -l administrator 192.168.1.167'
+alias sshff='ssh -l administrator 192.168.1.149'
+alias sshmf='ssh -l administrator 192.168.1.148'
+alias sshnf='ssh -l administrator 192.168.1.147'
+alias sshof='ssh -l administrator 192.168.1.146'
+
+
+
+#-------------------------------------------------------
+# Some suggestions for MOOS-IvP aliases
+#-------------------------------------------------------
+alias cdmi='cd ~/moos-ivp'
+alias cdmm='cdmi; cd ivp/missions'
+alias cdmma='cdmm; cd s1_alpha'
+alias cdmis='cdmi; cd ivp/src'
+alias runa='cdmma; pAntler alpha.moos'
+
+#-------------------------------------------------------
+# Misc Aliases
+#-------------------------------------------------------
+alias pingoe='ping oceanai.mit.edu'
+
+#-------------------------------------------------------
+# Set your Shell Prompt
+#-------------------------------------------------------
+
+PS1="\H:\W\$ "
+export PROMPT_DIRTRIM=3
+
+
+#-------------------------------------------------------
+# Utility for examining the PATH variable line by line
+#-------------------------------------------------------
+mypath() {
+    AMT=75
+    for INDEX in `seq 1 $AMT`;
+    do
+	PART=`echo $PATH | cut -d : -f $INDEX`
+	if [ "${PART}" = "" ]; then
+	    return 0
+	fi
+	echo $PART
+    done
+}
+
+#-------------------------------------------------------
+# Utility for examining IVP_BEHAVIOR_DIR variable line by line
+#-------------------------------------------------------
+mydirs() {
+    AMT=75
+    for INDEX in `seq 1 $AMT`;
+    do
+	PART=`echo $IVP_BEHAVIOR_DIRS | cut -d : -f $INDEX`
+	if [ "${PART}" = "" ]; then
+	    return 0
+	fi
+	echo $PART
+    done
+}
+
+
+#-------------------------------------------------------
+# Useful setting for MacOS to prevent zsh advertisement
+#-------------------------------------------------------
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+

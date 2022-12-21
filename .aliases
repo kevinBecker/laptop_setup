@@ -1,0 +1,19 @@
+
+
+#-------------------------------------------------------
+# Suggestions for useful aliases
+#-------------------------------------------------------
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls='ls -FG'
+alias ll='ls -hlG'
+alias cdd='cd ..'
+alias cddd='cd ../..'
+alias cdddd='cd ../../..'
+alias emacs='emacs --no-splash '
+alias nem='emacs -nw --no-splash '
+
+alias code='code .'
+
+
