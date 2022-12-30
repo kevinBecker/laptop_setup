@@ -1,4 +1,4 @@
-
+# echo "Sourcing .profile..."
 source ~/setup/.moos_setup
 source ~/setup/.aliases
 
@@ -9,4 +9,5 @@ source ~/setup/.aliases
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 
-
+PATH=$PATH::/opt/homebrew/bin
+export PATH

@@ -17,5 +17,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew install --cask visual-studio-code
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# Install zsh autosuggestions plugin
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 
 ./reload.sh
