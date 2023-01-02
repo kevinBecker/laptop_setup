@@ -20,5 +20,8 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 # Install zsh autosuggestions plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# Install tree
+brew install tree
+
 
 ./reload.sh

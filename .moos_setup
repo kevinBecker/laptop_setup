@@ -13,15 +13,25 @@ export PATH
 #---------------------------------
 #MOOS IVP Other Vars
 #---------------------------------
+
+# IVP_IMAGE_DIRS
 IVP_IMAGE_DIRS=~/pavlab_map_images/mit
 IVP_IMAGE_DIRS+=:~/pavlab_map_images/popolopen
 IVP_IMAGE_DIRS+=:~/pavlab_map_images/sydney_regatta
 IVP_IMAGE_DIRS+=:~/pavlab_map_images/oak_island
 export IVP_IMAGE_DIRS
 
-source "$HOME/pavlab_shorts/setup_pavlab_shorts"
+# IVP_BEHAVIOR_DIRS
+IVP_BEHAVIOR_DIRS=~/moos-ivp-pavlab/lib
+IVP_BEHAVIOR_DIRS+=:~/moos-ivp-swarm/trunk/lib
+export IVP_BEHAVIOR_DIRS
 
 
+#---------------------------------
+# MOOS IVP Shortcuts
+#---------------------------------
+
+source ~/pavlab_shorts/setup_pavlab_shorts
 
 
 #---------------------------------
