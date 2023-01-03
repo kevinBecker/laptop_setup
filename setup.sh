@@ -23,5 +23,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Install tree
 brew install tree
 
+# Install xterm
+brew install xterm
 
 ./reload.sh
