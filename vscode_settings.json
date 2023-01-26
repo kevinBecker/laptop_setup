@@ -1,5 +1,10 @@
 {
     "workbench.colorTheme": "Default Dark+",
+    "workbench.colorCustomizations": {
+      "[Monokai]": {
+        "sideBar.background": "#347890"
+      }
+    },
     "files.autoSave": "afterDelay",
     "workbench.list.smoothScrolling": true,
     "editor.smoothScrolling": true,
@@ -8,7 +13,5 @@
         "*.moos": "cpp",
         "*.bhv": "cpp"
     }
-    "includePath": [ "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/kevinbecker/moos-ivp/bin:/Users/kevinbecker/moos-ivp/scripts:/Users/kevinbecker/moos-ivp-kevin00/bin:/Users/kevinbecker/moos-ivp-swarm/trunk/bin:/Users/kevinbecker/moos-ivp-pavlab/bin:/Users/kevinbecker/moos-ivp-gazebo/bin:/Users/kevinbecker/pavlab_shorts/herons/:/Users/kevinbecker/pavlab_shorts/sailbot/::/opt/homebrew/bin"]
-
 }
 

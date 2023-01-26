@@ -1,4 +1,4 @@
-# echo "Sourcing .profile..."
+#echo "Sourcing .profile..."
 source ~/setup/.moos_setup
 source ~/setup/.aliases
 

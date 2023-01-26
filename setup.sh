@@ -5,7 +5,7 @@
 
 
 # Reminders to install other programs
-echo “Reminder to install Zoom, Rhino, and Slic3r”
+echo “Reminder to install Zoom, Rhino, goodnotes,  and Slic3r”
 
 # Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -23,7 +23,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Install tree
 brew install tree
 
-# Install xterm
+# Install xterm (MOOS IVP)
 brew install xterm
+
+# Install BLAS (MOOS IVP PAVLAB sandbox mac)
+#brew install --cask dbglass
+
+# Install Armadillo (MOOS IVP PAVLAB sandbox mac)
+#brew install armadillo
+
+# Install protobuf (MOOS_IVP_CHAMP)
+brew install protobuf
 
 ./reload.sh

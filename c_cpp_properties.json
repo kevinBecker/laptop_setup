@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "compileCommands": "./build.sh",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/bin/**",
+                "/System/Cryptexes/App/usr/bin/**",
+                "/usr/bin/**",
+                "/bin/**",
+                "/usr/sbin/**",
+                "/sbin/**",
+                "/Library/TeX/texbin/**",
+                "/Users/kevinbecker/moos-ivp/bin/**",
+                "/Users/kevinbecker/moos-ivp/MOOS/**",
+                "/Users/kevinbecker/moos-ivp-kevin00/bin/**",
+                "/Users/kevinbecker/moos-ivp-swarm/trunk/bin/**",
+                "/Users/kevinbecker/moos-ivp-pavlab/bin/**",
+                "/Users/kevinbecker/moos-ivp/include/ivp/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++11"
+        }
+    ],
+    "version": 4
+}
