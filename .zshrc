@@ -107,4 +107,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 setopt APPEND_HISTORY
+export DISPLAY=:0
 

@@ -1,7 +1,8 @@
 #echo "Sourcing .profile..."
-source ~/setup/.moos_setup
+PATH=/opt/homebrew/sbin::$PATH
+PATH=/opt/homebrew/bin::$PATH
 source ~/setup/.aliases
-
+source ~/setup/.moos_setup
 
 #-------------------------------------------------------
 # Useful setting for MacOS to prevent zsh advertisement
@@ -9,5 +10,4 @@ source ~/setup/.aliases
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 
-PATH=$PATH::/opt/homebrew/bin
 export PATH

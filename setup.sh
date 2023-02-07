@@ -26,6 +26,13 @@ brew install tree
 # Install xterm (MOOS IVP)
 brew install xterm
 
+# Install xquartz (MOOS IVP on mac, if newterminal=true)
+echo "Reminder to run xquartz via terminal after this script or errors will occur"
+brew install xquartz
+
+# Install wget
+brew install wget
+
 # Install BLAS (MOOS IVP PAVLAB sandbox mac)
 #brew install --cask dbglass
 
