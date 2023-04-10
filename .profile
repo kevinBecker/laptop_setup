@@ -1,6 +1,11 @@
 #echo "Sourcing .profile..."
-PATH=/opt/homebrew/sbin::$PATH
-PATH=/opt/homebrew/bin::$PATH
+#!/usr/bin/env bash
+
+if [ "$(uname)" == "Darwin" ]; then
+    # Do something under Mac OS X platform 
+    PATH=/opt/homebrew/sbin::$PATH
+    PATH=/opt/homebrew/bin::$PATH
+
 source ~/setup/.aliases
 source ~/setup/.moos_setup
 

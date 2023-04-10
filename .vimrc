@@ -57,7 +57,7 @@ set hidden
 set ignorecase
 set smartcase
 set hls "highlight search
-set scrolloff=3 " show lines above and below cursor (when possible)
+set scrolloff=5 " show lines above and below cursor (when possible)
 
 
 " Enable searching as you type, rather than waiting till you press enter.
@@ -72,6 +72,20 @@ set noerrorbells visualbell t_vb=
 " Enable mouse support. You should avoid relying on this too much, but it can
 " sometimes be convenient.
 set mouse+=a
+
+" highlight current line, but only in active window
+augroup CursorLineOnlyInActiveWindow
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
+
+
+
+filetype plugin indent on " enable file type detection
+set autoindent
+
+
 
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
