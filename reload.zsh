@@ -3,7 +3,7 @@ cp .vimrc ~/.vimrc
 cp .zshrc ~/.zshrc
 cp .pablo_names ~/.pablo_names
 
-if [ "$(uname)" == "Linux" ]; then
+if [[ "$(uname)" == "Linux" ]]; then
     cp vscode_settings.json Library/Application\ Support/Code/User/settings.json
 fi
 
