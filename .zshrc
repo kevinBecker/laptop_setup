@@ -106,14 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Editing the prompt
-# PROMPT="%F{magenta}%n%f" # Magenta user name
-PROMPT="@"
-PROMPT+="%F{magenta}${${(%):-%m}}%f" # Magenta host name
-# PROMPT+="%(?:%{%}➜ :%{%}➜ )"
-PROMPT+=" %{$fg[cyan]%}%c%{$reset_color%} "
-PROMPT+="$(git_prompt_info)"
-
+# Editing the prompt to add hostname
+PROMPT="%F{magenta}${${(%):-%m}}%f"$PROMPT
 
 setopt APPEND_HISTORY
 export DISPLAY=:0
