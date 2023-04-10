@@ -49,6 +49,7 @@ alias sshf='ssh -l student2680 192.168.19.100'
 alias sshm='ssh -l student2680 192.168.20.100'
 alias sshn='ssh -l student2680 192.168.21.100'
 alias ssho='ssh -l student2680 192.168.22.100'
+alias sshk='ssh -l student2680 192.168.2.2'
 
 alias sshaf='ssh -l administrator 192.168.1.173'
 alias sshbf='ssh -l administrator 192.168.1.174'
