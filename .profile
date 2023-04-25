@@ -6,12 +6,12 @@ if [[ "$(uname)" == "Darwin" ]]; then
     PATH=/opt/homebrew/bin:$PATH
 fi
 
-export PATH
-source ~/setup/.aliases
-export PATH
-source ~/setup/.moos_setup
 
-#-------------------------------------------------------
+source ~/setup/.aliases
+source ~/setup/.moos_setup
+source ~/setup/heron_aliases
+
+#------------------------------------------------------
 # Useful setting for MacOS to prevent zsh advertisement
 #-------------------------------------------------------
 export BASH_SILENCE_DEPRECATION_WARNING=1

@@ -9,6 +9,7 @@ PATH=$PATH:~/moos-ivp-swarm/trunk/bin
 PATH=$PATH:~/moos-ivp-pavlab/bin
 PATH=$PATH:~/moos-ivp-champ/bin
 PATH=$PATH:~/moos-ivp-2680/bin
+PATH=$PATH:~/moos-ivp-ktm/bin
 
 export PATH
 
@@ -26,6 +27,7 @@ export IVP_IMAGE_DIRS
 # IVP_BEHAVIOR_DIRS
 IVP_BEHAVIOR_DIRS=~/moos-ivp-pavlab/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-swarm/trunk/lib
+IVP_BEHAVIOR_DIRS+=:~/moos-ivp-kevinbecker/lib
 export IVP_BEHAVIOR_DIRS
 
 
