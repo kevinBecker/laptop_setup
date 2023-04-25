@@ -1,0 +1,44 @@
+# Front-Seat Computer SSH aliases  (abe,ben,cal,deb,eve,fin,max,ned,oak)
+alias sshaf='ssh -l student2680 192.168.1.173'
+alias sshbf='ssh -l student2680 192.168.1.174'
+alias sshcf='ssh -l student2680 192.168.1.169'
+alias sshdf='ssh -l student2680 192.168.1.168'
+alias sshef='ssh -l student2680 192.168.1.167'
+alias sshff='ssh -l student2680 192.168.1.149'
+alias sshmf='ssh -l student2680 192.168.1.148'
+alias sshnf='ssh -l student2680 192.168.1.147'
+alias sshof='ssh -l student2680 192.168.1.146'
+
+# Pablo SSH aliases  (abe,ben,cal,deb,eve,fin,max,ned,oak)
+alias ssha='ssh -l student2680 192.168.14.100'
+alias sshb='ssh -l student2680 192.168.15.100'
+alias sshc='ssh -l student2680 192.168.16.100'
+alias sshd='ssh -l student2680 192.168.17.100'
+alias sshe='ssh -l student2680 192.168.18.100'
+alias sshf='ssh -l student2680 192.168.19.100'
+alias sshm='ssh -l student2680 192.168.20.100'
+alias sshn='ssh -l student2680 192.168.21.100'
+alias ssho='ssh -l student2680 192.168.22.100'
+
+# Front-Seat Computer aliases  (abe,ben,cal,deb,eve,fin,max,ned,oak)
+alias pingaf='ping 192.168.1.173'
+alias pingbf='ping 192.168.1.174'
+alias pingcf='ping 192.168.1.169'
+alias pingdf='ping 192.168.1.168'
+alias pingef='ping 192.168.1.167'
+alias pingff='ping 192.168.1.149'
+alias pingmf='ping 192.168.1.148'
+alias pingnf='ping 192.168.1.147'
+alias pingof='ping 192.168.1.146'
+
+# Pablo aliases  (abe,ben,cal,deb,eve,fin,max,ned,oak)
+alias pinga='ping 192.168.14.100'
+alias pingb='ping 192.168.15.100'
+alias pingc='ping 192.168.16.100'
+alias pingd='ping 192.168.17.100'
+alias pinge='ping 192.168.18.100'
+alias pingf='ping 192.168.19.100'
+alias pingm='ping 192.168.20.100'
+alias pingn='ping 192.168.21.100'
+alias pingo='ping 192.168.22.100'
+
