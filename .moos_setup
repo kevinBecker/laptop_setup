@@ -4,6 +4,7 @@
 #---------------------------------
 PATH=$PATH:~/moos-ivp/bin
 PATH=$PATH:~/moos-ivp/scripts
+PATH=$PATH:~/moos-ivp/ivp/scripts
 PATH=$PATH:~/moos-ivp-kevinbecker/bin
 PATH=$PATH:~/moos-ivp-swarm/trunk/bin
 PATH=$PATH:~/moos-ivp-pavlab/bin
@@ -35,7 +36,8 @@ export IVP_BEHAVIOR_DIRS
 # MOOS IVP Shortcuts
 #---------------------------------
 
-# source ~/pavlab_shorts/setup_pavlab_shorts
+export path_ps="~/moos-ivp-pavlab/pavlab_shorts"
+#eval "source $path_ps/setup_pavlab_shorts"
 
 
 #---------------------------------
@@ -72,7 +74,14 @@ alias cdmi='cd ~/moos-ivp'
 alias cdmm='cdmi; cd ivp/missions'
 alias cdmma='cdmm; cd s1_alpha'
 alias cdmis='cdmi; cd ivp/src'
+
+alias cdktm='cd ~/moos-ivp-ktm/'
+alias cdkb='cd ~/moos-ivp-kevinbecker'
+alias cdch='cd ~/moos-ivp-champ'
+alias cdpav='cd ~/moos-ivp-pavlab'
+alias cdswarm='cd ~/moos-ivp-swarm'
 alias runa='cdmma; pAntler alpha.moos'
+alias relaunch='ktm; ./clean.sh; ./launch.sh'
 
 #-------------------------------------------------------
 # Misc Aliases

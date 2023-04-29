@@ -16,4 +16,4 @@ alias nem='emacs -nw --no-splash '
 
 alias code='code .'
 
-
+alias tf='tree -f | grep ' 

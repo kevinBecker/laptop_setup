@@ -11,6 +11,10 @@ source ~/setup/.aliases
 source ~/setup/.moos_setup
 source ~/setup/heron_aliases
 
+
+alias myip='ifconfig en0 |  grep inet'
+alias cdset='cd ~/setup'
+
 #------------------------------------------------------
 # Useful setting for MacOS to prevent zsh advertisement
 #-------------------------------------------------------
