@@ -13,7 +13,7 @@ alias cddd='cd ../..'
 alias cdddd='cd ../../..'
 alias emacs='emacs --no-splash '
 alias nem='emacs -nw --no-splash '
-
+alias rsrc='. ~/.zshrc'
 alias code='code .'
 
 alias tf='tree -f | grep '
