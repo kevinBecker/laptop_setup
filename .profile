@@ -10,6 +10,7 @@ fi
 source ~/setup/.aliases
 source ~/setup/.moos_setup
 source ~/setup/heron_aliases
+source ~/setup/reminders.sh
 
 
 alias myip='ifconfig en0 |  grep inet'
@@ -22,3 +23,5 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 
 export PATH
+
+

@@ -49,6 +49,9 @@ if [ "$(uname)" == "Darwin" ]; then
     # brew install Node.js
     # brew install jupyter-lab
     # brew install gdb
+    brew install shellcheck
+    brew install ninja
+    brew install nvim
     echo "Installed mac specific programs"
     export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
@@ -62,8 +65,19 @@ if [ "$(uname)" == "Linux" ]; then
     apt install zsh
     apt install git
     apt install vim
+    apt install shellcheck
+    apt install ninja
+    apt install nvim
     echo "Installed linux specific programs"
 fi
+
+
+
+#----------------------------------------------
+# Debugging tools to download
+#----------------------------------------------
+pip install --upgrade pyflakes
+
 
 
 #-----------------------------------------------
