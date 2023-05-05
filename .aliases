@@ -3,7 +3,9 @@
 #-------------------------------------------------------
 # Suggestions for useful aliases
 #-------------------------------------------------------
-alias rm='rm -i'
+
+alias rm='trash'
+#alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ls='ls -FG'
@@ -25,7 +27,7 @@ alias tf='tree -f | grep '
 #-------------------------------------------------------
 
 # make dir and enter it
-function mkd() {
+function mcd() {
 	mkdir -p "$@" && cd "$_";
 }
 

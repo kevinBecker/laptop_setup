@@ -52,6 +52,9 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install shellcheck
     brew install ninja
     brew install nvim
+    brew install libvirt
+    brew install --cask utm
+    brew install trash
     echo "Installed mac specific programs"
     export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
@@ -68,6 +71,8 @@ if [ "$(uname)" == "Linux" ]; then
     apt install shellcheck
     apt install ninja
     apt install nvim
+    apt install libvirt
+    apt install virtualbox
     echo "Installed linux specific programs"
 fi
 
