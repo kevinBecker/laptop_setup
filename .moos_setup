@@ -1,4 +1,5 @@
 #echo "Sourcing .moos_setup"
+
 #---------------------------------
 # MOOS IVP Path variables
 #---------------------------------
@@ -11,6 +12,8 @@ PATH=$PATH:~/moos-ivp-pavlab/bin
 PATH=$PATH:~/moos-ivp-champ/bin
 PATH=$PATH:~/moos-ivp-2680/bin
 PATH=$PATH:~/moos-ivp-ktm/bin
+PATH=$PATH:~/moos-ivp-kevinbecker/scripts
+
 
 export PATH
 
@@ -29,6 +32,7 @@ export IVP_IMAGE_DIRS
 IVP_BEHAVIOR_DIRS=~/moos-ivp-pavlab/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-swarm/trunk/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-kevinbecker/lib
+IVP_BEHAVIOR_DIRS+=:~/moos-ivp-ktm/lib
 export IVP_BEHAVIOR_DIRS
 
 
@@ -92,7 +96,6 @@ alias pingoe='ping oceanai.mit.edu'
 # Set your Shell Prompt
 #-------------------------------------------------------
 
-PS1="\H:\W\$ "
 export PROMPT_DIRTRIM=3
 
 

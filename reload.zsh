@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 cp .vimrc ~/.vimrc
 cp .zshrc ~/.zshrc
 cp .pablo_names ~/.pablo_names

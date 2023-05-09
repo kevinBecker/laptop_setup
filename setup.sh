@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 
 #-----------------------------------------------
 # Setup script for Kevin Becker's Computer Setup

@@ -17,7 +17,8 @@ alias emacs='emacs --no-splash '
 alias nem='emacs -nw --no-splash '
 alias rsrc='. ~/.zshrc'
 alias code='code .'
-
+alias vs='code .'
+alias b='./build.sh'
 alias tf='tree -f | grep '
 
 

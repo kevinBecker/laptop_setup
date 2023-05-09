@@ -6,7 +6,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     PATH=/opt/homebrew/bin:$PATH
 fi
 
-
+source ~/setup/.zsh_defaults
 source ~/setup/.aliases
 source ~/setup/.moos_setup
 source ~/setup/heron_aliases
