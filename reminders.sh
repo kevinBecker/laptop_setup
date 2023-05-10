@@ -37,6 +37,11 @@ printf "\e[38;2;%s;%s;%sm\e[2m alias for source ~/.zshrc\n\e[0m" "$R3" "$G3" "$B
 printf "\e[38;2;%s;%s;%sm\t- rm \e[0m" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m alias for trash\n\e[0m" "$R3" "$G3" "$B3"
 
+printf "\e[38;2;%s;%s;%sm\t- ls -tr\e[0m" "$R2" "$G2" "$B2"
+printf "\e[38;2;%s;%s;%sm\e[2m sort by time, newest at bottom\n\e[0m" "$R3" "$G3" "$B3"
+
+printf "\e[38;2;%s;%s;%sm\t- cd - \e[0m" "$R2" "$G2" "$B2"
+printf "\e[38;2;%s;%s;%sm\e[2m cd into last dir\n\e[0m" "$R3" "$G3" "$B3"
 
 printf "\e[38;2;%s;%s;%sm\t- rb \e[0m" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m function for recursive build (goes back until it finds build.sh, runs -j8)\n\e[0m" "$R3" "$G3" "$B3"
