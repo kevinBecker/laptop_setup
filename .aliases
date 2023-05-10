@@ -18,9 +18,10 @@ alias nem='emacs -nw --no-splash '
 alias rsrc='. ~/.zshrc'
 alias code='code .'
 alias vs='code .'
-alias b='./build.sh'
-alias tf='tree -f | grep '
-
+alias b='./build.sh -j8'
+alias launch='./launch.sh'
+alias tg='tree -f | grep '
+alias hg='history | grep '
 
 
 #-------------------------------------------------------
@@ -37,3 +38,20 @@ function cdf() { # short for `cdfinder`
 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
 
+function rb() { # short for rebuild
+    local current_dir=$(pwd)
+    local max_depth=3
+    local depth=0
+    while [[ $depth -lt $max_depth ]]
+    do
+        if [[ -f "./build.sh" ]]; then
+            ./build.sh -j8
+            cd "$current_dir"
+            return 0
+        fi
+        cd ..
+        ((depth++))
+    done
+    cd "$current_dir"
+    echo "build.sh not found within $max_depth levels"
+}

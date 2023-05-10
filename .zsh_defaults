@@ -35,6 +35,6 @@ setopt APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 
 # For MOOS
-export DISPLAY:=0
+export DISPLAY=0
 
 
