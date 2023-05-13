@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 source ~/setup/.zprofile
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="kevinbecker1"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -82,9 +82,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Editing the prompt to add hostname
-PROMPT="%F{magenta}${${(%):-%m}}%f"$PROMPT
 
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_SPACE

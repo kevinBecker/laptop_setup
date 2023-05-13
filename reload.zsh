@@ -2,6 +2,7 @@
 cp .vimrc ~/.vimrc
 cp .zshrc ~/.zshrc
 cp .pablo_names ~/.pablo_names
+cp kevinbecker1.zsh-theme ~/.oh-my-zsh/custom/themes/kevinbecker1.zsh-theme
 
 if [[ "$(uname)" == "Linux" ]]; then
     cp vscode_settings.json Library/Application\ Support/Code/User/settings.json
