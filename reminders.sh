@@ -16,6 +16,9 @@ B3=$B3
 printf "\e[38;2;%s;%s;%sm\e[1m\nFriendly reminders of tools/aliases I've installed:\n\e[0m" "$R" "$G" "$B"
 # ---------------------------------------------------
 
+printf "\e[38;2;%s;%s;%sm\t- vr" "$R" "$G" "$B"
+printf "\e[38;2;%s;%s;%sm\e[2m vim reminders\n\e[0m" "$R3" "$G3" "$B3"
+
 printf "\e[38;2;%s;%s;%sm\t- shellcheck" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m on shell scripts\n\e[0m" "$R3" "$G3" "$B3"
 

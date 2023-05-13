@@ -22,6 +22,7 @@ alias b='./build.sh -j8'
 alias launch='./launch.sh'
 alias tg='tree -f | grep '
 alias hg='history | grep '
+alias vr='~/setup/vim_reminders.sh'
 
 
 #-------------------------------------------------------
