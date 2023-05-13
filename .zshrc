@@ -5,7 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Sourcing my profile, pulled from bashrc
-source ~/setup/.profile
+source ~/setup/.zprofile
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"

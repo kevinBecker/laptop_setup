@@ -31,7 +31,7 @@ export IVP_IMAGE_DIRS
 # IVP_BEHAVIOR_DIRS
 IVP_BEHAVIOR_DIRS=~/moos-ivp-pavlab/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-swarm/trunk/lib
-IVP_BEHAVIOR_DIRS+=:~/moos-ivp-kevinbecker/lib
+# IVP_BEHAVIOR_DIRS+=:~/moos-ivp-kevinbecker/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-ktm/lib
 export IVP_BEHAVIOR_DIRS
 

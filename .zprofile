@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 
 if [[ "$(uname)" == "Darwin" ]]; then
     # Do something under Mac OS X platform 
