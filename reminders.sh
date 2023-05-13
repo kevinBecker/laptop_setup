@@ -44,7 +44,7 @@ printf "\e[38;2;%s;%s;%sm\t- cd - \e[0m" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m cd into last dir\n\e[0m" "$R3" "$G3" "$B3"
 
 printf "\e[38;2;%s;%s;%sm\t- rb \e[0m" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m function for recursive build (goes back until it finds build.sh, runs -j8)\n\e[0m" "$R3" "$G3" "$B3"
+printf "\e[38;2;%s;%s;%sm\e[2m recursive build (goes back, finds build.sh, runs -j8)\n\e[0m" "$R3" "$G3" "$B3"
 
 
 
