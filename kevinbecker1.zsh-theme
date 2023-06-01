@@ -1,8 +1,8 @@
 
 # hostname
-PROMPT="%F{magenta}${${(%):-%m}}%f"$PROMPT
+PROMPT="%F{magenta}${${(%):-%m}}%f"
 # colored arrow
-PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%c%{$reset_color%}"
+PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%c%{$reset_color%}"
 
 
 # git info, if exists
