@@ -21,7 +21,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 
-#-----------------------------------------------
+
+#----------------------------------------------
 # MacOS specific installs
 #-----------------------------------------------
 if [ "$(uname)" == "Darwin" ]; then
@@ -94,7 +95,7 @@ echo "Reminder to run xquartz via terminal after this script or errors will occu
 echo “Reminder to install Zoom, Rhino, goodnotes,  and Slic3r”
 echo "Install pydrake and underactuated"
 echo "Install SuperSlicer"
-
+echo "Reminder to install zotero"
 
 
 ./reload.zsh
