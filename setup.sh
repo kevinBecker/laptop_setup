@@ -35,6 +35,7 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install git
     brew install vim
     brew install tree
+    brew install gpg
     # Install xterm (MOOS IVP)
     brew install xterm
     # Install xquartz (MOOS IVP on mac, if newterminal=true)

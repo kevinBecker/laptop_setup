@@ -24,7 +24,7 @@ alias launch='./launch.sh'
 alias tg='tree -f | grep '
 alias hg='history | grep '
 alias vr='~/setup/vim_reminders.sh'
-
+alias myip='echo "$(ifconfig | grep "inet " | grep -v "127.0.0.1" | awk "{print \$2}")"'
 
 #-------------------------------------------------------
 # Functions
