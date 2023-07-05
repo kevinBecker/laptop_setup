@@ -22,6 +22,9 @@ printf "\e[38;2;%s;%s;%sm\e[2m vim reminders\n\e[0m" "$R3" "$G3" "$B3"
 printf "\e[38;2;%s;%s;%sm\t- shellcheck" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m on shell scripts\n\e[0m" "$R3" "$G3" "$B3"
 
+printf "\e[38;2;%s;%s;%sm\t- NewScript scriptname" "$R2" "$G2" "$B2"
+printf "\e[38;2;%s;%s;%sm\e[2m generates a new script\n\e[0m" "$R3" "$G3" "$B3"
+
 printf "\e[38;2;%s;%s;%sm\t- pyflakes" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m on python script debugging\n\e[0m" "$R3" "$G3" "$B3"
 
