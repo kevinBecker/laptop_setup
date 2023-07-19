@@ -13,7 +13,7 @@ PATH=$PATH:~/moos-ivp-champ/bin
 PATH=$PATH:~/moos-ivp-2680/bin
 PATH=$PATH:~/moos-ivp-ktm/bin
 PATH=$PATH:~/moos-ivp-kevinbecker/scripts
-PATH=$PATH:~/auv_lab/monte-moos/scripts
+PATH=$PATH:~/monte-moos/scripts
 
 
 export PATH

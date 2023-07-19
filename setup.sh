@@ -57,6 +57,7 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install libvirt
     brew install --cask utm
     brew install trash
+    brew install miller
     echo "Installed mac specific programs"
     export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
@@ -75,6 +76,7 @@ if [ "$(uname)" == "Linux" ]; then
     apt install nvim
     apt install libvirt
     apt install virtualbox
+    apt-get install miller
     echo "Installed linux specific programs"
 fi
 

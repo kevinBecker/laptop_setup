@@ -12,6 +12,10 @@ R3=$R2
 G3=$G3
 B3=$B3
 
+R4=80
+G4=150
+B4=168
+
 # ---------------------------------------------------
 printf "\e[38;2;%s;%s;%sm\e[1m\nFriendly reminders of tools/aliases I've installed:\n\e[0m" "$R" "$G" "$B"
 # ---------------------------------------------------
@@ -22,7 +26,8 @@ printf "\e[38;2;%s;%s;%sm\e[2m vim reminders\n\e[0m" "$R3" "$G3" "$B3"
 printf "\e[38;2;%s;%s;%sm\t- shellcheck" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m on shell scripts\n\e[0m" "$R3" "$G3" "$B3"
 
-printf "\e[38;2;%s;%s;%sm\t- NewScript scriptname" "$R2" "$G2" "$B2"
+printf "\e[38;2;%s;%s;%sm\t- NewScript" "$R2" "$G2" "$B2"
+printf "\e[38;2;%s;%s;%sm scriptname" "$R4" "$G4" "$B4"
 printf "\e[38;2;%s;%s;%sm\e[2m generates a new script\n\e[0m" "$R3" "$G3" "$B3"
 
 printf "\e[38;2;%s;%s;%sm\t- pyflakes" "$R2" "$G2" "$B2"
