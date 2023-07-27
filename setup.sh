@@ -36,6 +36,7 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install vim
     brew install tree
     brew install gpg
+    # brew install coreutils #Timeout, but not going to use quite yet
     # Install xterm (MOOS IVP)
     brew install xterm
     # Install xquartz (MOOS IVP on mac, if newterminal=true)
@@ -51,6 +52,7 @@ if [ "$(uname)" == "Darwin" ]; then
     # brew install Node.js
     # brew install jupyter-lab
     # brew install gdb
+    brew install tmux
     brew install shellcheck
     brew install ninja
     brew install nvim
