@@ -32,8 +32,7 @@ export IVP_IMAGE_DIRS
 # IVP_BEHAVIOR_DIRS
 IVP_BEHAVIOR_DIRS=~/moos-ivp-pavlab/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-swarm/lib
-IVP_BEHAVIOR_DIRS+=:~/moos-ivp-swarm/lib
-# IVP_BEHAVIOR_DIRS+=:~/moos-ivp-kevinbecker/lib
+IVP_BEHAVIOR_DIRS+=:~/moos-ivp-kevinbecker/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-2680/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-ktm/lib
 export IVP_BEHAVIOR_DIRS
@@ -131,6 +130,24 @@ mydirs() {
 	echo $PART
     done
 }
+
+
+#-------------------------------------------------------
+# Utility for viewing client statuses on oceanai 
+#-------------------------------------------------------
+if [[ "$(hostname)" == "oceanai" ]]; then
+  catstat () {
+    for file in /home/yodacora/monte-moos/clients/status/*; do
+        if [[ -f "$file" ]]; then
+            if [[ "$file" == *.txt ]]; then
+                echo -n "$(tput bold)$(tput setaf 2)$(basename $file)$(tput sgr0)"
+		echo "  $(cat $file)"
+            fi
+        fi
+	done
+  }
+fi
+
 
 
 #-------------------------------------------------------
