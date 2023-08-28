@@ -35,5 +35,11 @@ printf "\e[38;2;%s;%s;%sm\t- r_\e[0m" "$R2" "$G2" "$B2"
 printf "\e[38;2;%s;%s;%sm\e[2m replace character with _ \n\e[0m" "$R3" "$G3" "$B3"
 
 
+printf "\e[38;2;%s;%s;%sm\t- CTRL+V, select lines, SHIFT+I #\e[0m" "$R2" "$G2" "$B2"
+printf "\e[38;2;%s;%s;%sm\e[2m Comment out selected lines (visual block mode -> insert mode) \n\e[0m" "$R3" "$G3" "$B3"
+
+
+
+
 
 printf "\n"

@@ -94,7 +94,7 @@ pip install --upgrade pyflakes
 #-----------------------------------------------
 # Reminders to install other programs
 #-----------------------------------------------
-git clone https://github.com/raymondturrisi/pavlab_shorts
+# git clone https://github.com/raymondturrisi/pavlab_shorts
 
 echo "Reminder to run xquartz via terminal after this script or errors will occur"
 echo “Reminder to install Zoom, Rhino, goodnotes,  and Slic3r”

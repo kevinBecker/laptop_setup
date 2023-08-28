@@ -141,7 +141,7 @@ if [[ "$(hostname)" == "oceanai" ]]; then
         if [[ -f "$file" ]]; then
             if [[ "$file" == *.txt ]]; then
                 echo -n "$(tput bold)$(tput setaf 2)$(basename $file)$(tput sgr0)"
-		echo "  $(cat $file)"
+		echo "  $(head -n 1 $file)"
             fi
         fi
 	done
