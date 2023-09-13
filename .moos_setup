@@ -146,6 +146,22 @@ if [[ "$(hostname)" == "oceanai" ]]; then
         fi
 	done
   }
+  catbad () {
+  # get the username (arg or current user)
+  user=$1
+  [[ "$user" -ne "" ]] || { user=$(whoami) ; }
+  for file in /home/yodacora/monte-moos/clients/bad_jobs/*; do
+    if [[ -f "$file" ]]; then
+      if [[ "$file" == *.txt && $(wc -l $file | awk '{ print $1 }') -gt 0 ]]; then
+        echo "$(tput bold)$(tput setaf 1)$(basename $file)$(tput sgr0)"
+        while read line; do
+            echo "  $line"
+        done < $file
+      fi
+    fi
+  done
+}
+
 fi
 
 
