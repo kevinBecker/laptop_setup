@@ -83,7 +83,10 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source ~/.bash_profile
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 export DISPLAY=:0
+
+
 

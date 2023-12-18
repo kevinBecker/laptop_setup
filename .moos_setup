@@ -6,11 +6,13 @@
 PATH=$PATH:~/moos-ivp/bin
 PATH=$PATH:~/moos-ivp/scripts
 PATH=$PATH:~/moos-ivp/ivp/scripts
+PATH=$PATH:~/moos-ivp/ivp/bin 
 PATH=$PATH:~/moos-ivp-kevinbecker/bin
 PATH=$PATH:~/moos-ivp-swarm/bin
 PATH=$PATH:~/moos-ivp-pavlab/bin
 PATH=$PATH:~/moos-ivp-champ/bin
 PATH=$PATH:~/moos-ivp-2680/bin
+PATH=$PATH:~/moos-ivp-aquaticus/trunk/bin
 PATH=$PATH:~/moos-ivp-ktm/bin
 PATH=$PATH:~/moos-ivp-kevinbecker/scripts
 PATH=$PATH:~/monte-moos/scripts
@@ -35,6 +37,7 @@ IVP_BEHAVIOR_DIRS+=:~/moos-ivp-swarm/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-kevinbecker/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-2680/lib
 IVP_BEHAVIOR_DIRS+=:~/moos-ivp-ktm/lib
+IVP_BEHAVIOR_DIRS+=:~/moos-ivp-aquaticus/trunk/lib
 export IVP_BEHAVIOR_DIRS
 
 
@@ -44,7 +47,7 @@ export IVP_BEHAVIOR_DIRS
 
 #export path_ps="~/moos-ivp-pavlab/pavlab_shorts"
 #eval "source $path_ps/setup_pavlab_shorts"
-
+source /Users/kevinbecker/moos-ivp-aquaticus/trunk/missions/jervis-2023/aliases.txt
 
 #---------------------------------
 # SSH Shortcuts for Heron Work
@@ -73,10 +76,15 @@ alias sshof='ssh -l administrator 192.168.1.146'
 
 
 
+
+
+
 #-------------------------------------------------------
 # Some suggestions for MOOS-IvP aliases
 #-------------------------------------------------------
 alias cdmi='cd ~/moos-ivp'
+alias cdmo='cd ~/monte-moos'
+alias cdaq='cd ~/moos-ivp-aquaticus/trunk'
 alias cdmm='cdmi; cd ivp/missions'
 alias cdmma='cdmm; cd s1_alpha'
 alias cdmis='cdmi; cd ivp/src'
@@ -136,32 +144,37 @@ mydirs() {
 # Utility for viewing client statuses on oceanai 
 #-------------------------------------------------------
 if [[ "$(hostname)" == "oceanai" ]]; then
-  catstat () {
-    for file in /home/yodacora/monte-moos/clients/status/*; do
-        if [[ -f "$file" ]]; then
-            if [[ "$file" == *.txt ]]; then
-                echo -n "$(tput bold)$(tput setaf 2)$(basename $file)$(tput sgr0)"
-		echo "  $(head -n 1 $file)"
-            fi
+catstat () {
+  find /home/yodacora/monte-moos/clients/status/* -mindepth 1 -mtime +1 -delete
+  for file in /home/yodacora/monte-moos/clients/status/*
+    do
+      if [[ -f "$file" ]]
+        then
+          if [[ "$file" == *.txt ]]
+            then
+              echo -n "$(tput bold)$(tput setaf 2)$(basename $file)$(tput sgr0)"
+              echo "  $(head -n 1 $file)"
+          fi
         fi
-	done
-  }
-  catbad () {
-  # get the username (arg or current user)
-  user=$1
-  [[ "$user" -ne "" ]] || { user=$(whoami) ; }
+    done
+}
+catbad () {
+  # get the client name (arg or current user)
+  # user=$1 #to be used in later version
+  # [[ "$user" -ne "" ]] || { user=$(whoami) ; }
+  find /home/yodacora/monte-moos/clients/bad_jobs/* -mindepth 1 -mtime +1 -delete
   for file in /home/yodacora/monte-moos/clients/bad_jobs/*; do
     if [[ -f "$file" ]]; then
       if [[ "$file" == *.txt && $(wc -l $file | awk '{ print $1 }') -gt 0 ]]; then
         echo "$(tput bold)$(tput setaf 1)$(basename $file)$(tput sgr0)"
         while read line; do
+            [[ "$line" == "" ]] && { continue ; }
             echo "  $line"
         done < $file
-      fi
+      fi    
     fi
   done
 }
-
 fi
 
 

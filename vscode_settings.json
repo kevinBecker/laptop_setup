@@ -6,12 +6,49 @@
       }
     },
     "files.autoSave": "afterDelay",
-    "workbench.list.smoothScrolling": true,
-    "editor.smoothScrolling": true,
-    "terminal.integrated.smoothScrolling": true,
     "files.associations": {
         "*.moos": "cpp",
         "*.bhv": "cpp"
-    }
+    },
+    "workbench.startupEditor": "none",
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
+    "settingsSync.ignoredSettings": [
+      "-C_Cpp.default.intelliSenseMode"
+    ],
+    "C_Cpp.default.cppStandard": "c++11",
+    "editor.minimap.enabled": false,
+    "diffEditor.codeLens": true,
+    "git.openRepositoryInParentFolders": "always",
+    "terminal.integrated.commandsToSkipShell": [
+      "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "[python]": {
+      "editor.formatOnType": true,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "cmake.configureOnOpen": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "github.copilot.enable": {
+      "*": false,
+      "plaintext": true,
+      "markdown": true,
+      "scminput": false,
+      "yaml": false
+    },
+    "git.autofetch": true,
+    "julia.enableTelemetry": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "moos-ivp.includePath": [
+    
+    ],
+
+  
+    
 }
 

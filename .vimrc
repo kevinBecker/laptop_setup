@@ -63,6 +63,10 @@ set noerrorbells visualbell t_vb=
 " Enable mouse support
 set mouse=a
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+cmap x!! x !sudo tee > /dev/null %
+
 " Don't reset cursor to start of line when moving around
 set nostartofline
 

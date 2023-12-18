@@ -31,11 +31,13 @@ if [ "$(uname)" == "Darwin" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     # Install vscode and let me use the "code" plugin thing
     brew install --cask visual-studio-code
+    brew install sshpass
     brew install git
     brew install git
     brew install vim
     brew install tree
     brew install gpg
+    brew install pdfgrep
     # brew install coreutils #Timeout, but not going to use quite yet
     # Install xterm (MOOS IVP)
     brew install xterm
@@ -48,18 +50,23 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install armadillo
     # Install protobuf (for MOOS_IVP_CHAMP)
     brew install protobuf
+    # Use brew installation of python
     brew install python3
+
     # brew install Node.js
     # brew install jupyter-lab
     # brew install gdb
+    
+    # For MOOS-IvP
     brew install tmux
     brew install shellcheck
-    brew install ninja
+    # brew install ninja
     brew install nvim
     brew install libvirt
     brew install --cask utm
     brew install trash
-    brew install miller
+    brew install clang-format
+    brew install octave #matlab alternative
     echo "Installed mac specific programs"
     export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
@@ -73,6 +80,7 @@ if [ "$(uname)" == "Linux" ]; then
     apt install zsh
     apt install git
     apt install vim
+    apt install clang-format
     apt install shellcheck
     apt install ninja
     apt install nvim
