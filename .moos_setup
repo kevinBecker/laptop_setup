@@ -145,7 +145,7 @@ mydirs() {
 #-------------------------------------------------------
 if [[ "$(hostname)" == "oceanai" ]]; then
 catstat () {
-  for file in $(find /home/yodacora/monte-moos/clients/status/ -mindepth 1 -mtime -1) ; do
+  for file in $(find /home/yodacora/monte-moos/clients/status/ -mindepth 1 -mmin -3) ; do
       if [[ -f "$file" ]]
         then
           if [[ "$file" == *.txt ]]
