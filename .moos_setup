@@ -15,10 +15,15 @@ PATH=$PATH:~/moos-ivp-2680/bin
 PATH=$PATH:~/moos-ivp-aquaticus/trunk/bin
 PATH=$PATH:~/moos-ivp-ktm/bin
 PATH=$PATH:~/moos-ivp-kevinbecker/scripts
-PATH=$PATH:~/monte-moos/scripts
-
-
 export PATH
+
+#--------------------------------
+# monte-moos Other Vars
+#---------------------------------
+export MONTE_MOOS_BASE_DIR="${HOME}/auv_lab/thesis/code/monte-moos" # BOTH
+export PATH="${PATH}:${MONTE_MOOS_BASE_DIR}/global_scripts" # BOTH
+export CARLO_DIR_LOCATION="${HOME}/auv_lab/thesis/code/carlo_dirs/kevin00_carlo_dir" # BOTH
+source ${CARLO_DIR_LOCATION}/monte_info # BOTH
 
 #--------------------------------
 #MOOS IVP Other Vars
@@ -83,7 +88,8 @@ alias sshof='ssh -l administrator 192.168.1.146'
 # Some suggestions for MOOS-IvP aliases
 #-------------------------------------------------------
 alias cdmi='cd ~/moos-ivp'
-alias cdmo='cd ~/monte-moos'
+alias cdmo='cd $MONTE_MOOS_BASE_DIR'
+alias cdca='cd $CARLO_DIR_LOCATION'
 alias cdaq='cd ~/moos-ivp-aquaticus/trunk'
 alias cdmm='cdmi; cd ivp/missions'
 alias cdmma='cdmm; cd s1_alpha'
