@@ -1,62 +1,68 @@
 #!/usr/bin/env bash
-
-R=80
-G=255
-B=80
+R1=80
+G1=255
+B1=80
 
 R2=0
 G2=255
 B2=255
 
 R3=$R2
-G3=$G3
-B3=$B3
+G3=0
+B3=0
 
 R4=80
 G4=150
 B4=168
+bold_cecho() {
+    var="R$2"
+    R=$(eval echo \$$var)
+    var="G$2"
+    G=$(eval echo \$$var)
+    var="B$2"
+    B=$(eval echo \$$var)
+    printf "\e[38;2;%s;%s;%sm\e[1m\n$1\e[0m" "$R" "$G" "$B"
+}
+cecho() {
+    var="R$2"
+    R=$(eval echo \$$var)
+    var="G$2"
+    G=$(eval echo \$$var)
+    var="B$2"
+    B=$(eval echo \$$var)
+    printf "\e[38;2;%s;%s;%sm$1" "$R" "$G" "$B"
+}
+
+
+
 
 # ---------------------------------------------------
-printf "\e[38;2;%s;%s;%sm\e[1m\nReminders of tools/aliases I've installed:\n\e[0m" "$R" "$G" "$B"
-# ---------------------------------------------------
+bold_cecho "Reminders of tools/aliases I've installed:\n"  1
 
-printf "\e[38;2;%s;%s;%sm\t- vr" "$R" "$G" "$B"
-printf "\e[38;2;%s;%s;%sm\e[2m vim reminders\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- shellcheck" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m on shell scripts\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- newscript" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm scriptname" "$R4" "$G4" "$B4"
-printf "\e[38;2;%s;%s;%sm\e[2m generates a new script\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- pyflakes" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m on python script debugging\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- tg\e[0m" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m alias for tree -f | grep ____\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- hg\e[0m" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m alias for history | grep ____\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- mcd\e[0m" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m function to make a dir and enter it\n\e[0m" "$R3" "$G3" "$B3"
-
-#printf "\e[38;2;%s;%s;%sm\t- rsrc\e[0m" "$R2" "$G2" "$B2"
-#printf "\e[38;2;%s;%s;%sm\e[2m alias for source ~/.zshrc\n\e[0m" "$R3" "$G3" "$B3"
-
-#printf "\e[38;2;%s;%s;%sm\t- rm \e[0m" "$R2" "$G2" "$B2"
-#printf "\e[38;2;%s;%s;%sm\e[2m alias for trash\n\e[0m" "$R3" "$G3" "$B3"
-
-#printf "\e[38;2;%s;%s;%sm\t- ls -halt\e[0m" "$R2" "$G2" "$B2"
-#printf "\e[38;2;%s;%s;%sm\e[2m sort by time, newest at bottom\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- cd - \e[0m" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m cd into last dir\n\e[0m" "$R3" "$G3" "$B3"
-
-printf "\e[38;2;%s;%s;%sm\t- rb \e[0m" "$R2" "$G2" "$B2"
-printf "\e[38;2;%s;%s;%sm\e[2m recursive build (goes back, finds build.sh, runs -j8)\n\e[0m" "$R3" "$G3" "$B3"
-
+cecho "\t- vr " 2
+cecho "\t- vim reminders" 3
+echo ""
+cecho "\t- shellcheck " 2
+cecho "\t- on shell scripts" 3
+echo ""
+cecho "\t- mmcluster.sh" 2
+cecho "\t- ssh into each pi in the monte-moos cluster" 3
+echo ""
+cecho "\t- newscript " 2
+cecho "\t scriptname" 4
+cecho "\t- generates a new script" 3
+echo ""
+cecho "\t- pyflakes " 2
+cecho "\t- on python script debugging" 3
+echo ""
+cecho "\t- tg " 2
+cecho "\t- alias for tree -f | grep ____" 3
+echo ""
+cecho "\t- hg " 2
+cecho "\t- alias for history | grep ____" 3
+echo ""
+cecho "\t- rb " 2
+cecho "\t- recursive build (goes back, finds build.sh, runs -j8)" 3
 
 
 printf "\n"
