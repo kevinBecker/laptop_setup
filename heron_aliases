@@ -19,7 +19,7 @@ alias sshe='ssh -l student2680 192.168.18.100'
 alias sshf='ssh -l student2680 192.168.19.100'
 alias sshm='ssh -l student2680 192.168.20.100'
 alias sshn='ssh -l student2680 192.168.21.100'
-alias ssho='ssh -l student2680 192.168.22.100'
+#alias ssho='ssh -l student2680 192.168.22.100'
 
 # Front-Seat Computer aliases  (abe,ben,cal,deb,eve,fin,max,ned,oak)
 alias pingaf='ping 192.168.1.173'
