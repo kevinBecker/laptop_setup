@@ -79,7 +79,7 @@ alias sshmf='ssh -l administrator 192.168.1.148'
 alias sshnf='ssh -l administrator 192.168.1.147'
 alias sshof='ssh -l administrator 192.168.1.146'
 
-
+alias ssho='ssh oceanai.mit.edu'
 
 
 
