@@ -33,7 +33,6 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install --cask visual-studio-code
     brew install sshpass
     brew install git
-    brew install git
     brew install vim
     brew install tree
     brew install gpg
