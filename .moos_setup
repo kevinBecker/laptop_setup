@@ -22,9 +22,9 @@ export PATH
 #--------------------------------
 # monte-moos Other Vars
 #---------------------------------
-export MONTE_MOOS_BASE_DIR="${HOME}/auv_lab/thesis/code/monte-moos" # BOTH
+export MONTE_MOOS_BASE_DIR="/home/monte/monte-moos" # BOTH
 export PATH="${PATH}:${MONTE_MOOS_BASE_DIR}/global_scripts" # BOTH
-export CARLO_DIR_LOCATION="${HOME}/auv_lab/thesis/code/carlo_dirs/kevin00_carlo_dir" # BOTH
+export CARLO_DIR_LOCATION="/home/monte/carlo_dir" # BOTH
 source ${CARLO_DIR_LOCATION}/monte_info # BOTH
 
 #--------------------------------
@@ -153,16 +153,7 @@ mydirs() {
 #-------------------------------------------------------
 if [[ "$(hostname)" == "oceanai" ]]; then
 catstat () {
-  for file in $(find /home/yodacora/monte-moos/clients/status/ -mindepth 1 -mmin -3 | sort) ; do
-      if [[ -f "$file" ]]
-        then
-          if [[ "$file" == *.txt ]]
-            then
-              echo -n "$(tput bold)$(tput setaf 2)$(basename $file)$(tput sgr0)"
-              echo "  $(head -n 1 $file)"
-          fi
-        fi
-    done
+  ~/setup/catstat.sh $1 $2 $3 $4
 }
 
 catbad () {
