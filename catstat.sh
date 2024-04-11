@@ -59,7 +59,7 @@ done
 
 
 
-for file in $(find $STATDIR -mindepth 1 -mmin -3 | sort) ; do
+for file in $(find $STATDIR -mindepth 1 -mmin -10 | sort) ; do
     if [[ -f "$file" ]]
     then
         if [[ "$file" == *.txt ]]

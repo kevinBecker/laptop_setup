@@ -57,7 +57,7 @@ echo ""
 cecho "\t- r_" 2
 cecho "\t- Replace character with _" 3
 echo ""
-cecho "\t- CTRL+V, select lines, SHIFT+I #" 2
+cecho "\t- CTRL+V, select lines, SHIFT+I #, ESC,ESC" 2
 cecho "\t- Comment out selected lines (visual block mode -> insert mode) " 3
 echo ""
 
