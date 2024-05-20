@@ -26,6 +26,7 @@ alias hg='history | grep '
 alias vr='~/setup/vim_reminders.sh'
 alias myip='echo "$(ifconfig | grep "inet " | grep -v "127.0.0.1" | awk "{print \$2}")"'
 alias sshap='ssh-add -t 432000 ~/.ssh/id_rsa_pab'
+alias sshhome='ssh kjbecker00@https://www.kjbecker00.duckdns.org -p 1025'
 alias thesis='cd ~/auv_lab/thesis/writing/thesis_doc ; git pull'
 
 #-------------------------------------------------------
