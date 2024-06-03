@@ -1,8 +1,8 @@
 # !/bin/zsh
 # Keeping thse defaults here instead of my zshrc so I can use whatever zshrc file I want
+# echo ".zsh_defaults"
 
-
-# Theme
+# Theme (set in zshrc)
 # ZSH_THEME="robbyrussell"
 
 # Show waiting dots
@@ -21,10 +21,6 @@ plugins=(git
 #PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%c%{$reset_color%}"
 #PROMPT+=' $(git_prompt_info)'
 
-#ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
-#ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-#ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
-#ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 PROMPT="%F{magenta}${${(%):-%m}}%f"$PROMPT
 
 #export PROMPT="%F{magenta}napa%f%(?:%{%}➜ :%{%}➜ ) %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)"
