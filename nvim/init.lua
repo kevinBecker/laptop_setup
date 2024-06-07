@@ -41,17 +41,6 @@ What is Kickstart?
     - :help lua-guide
     - (or HTML version): https://neovim.io/doc/user/lua-guide.html
 
-Kickstart Guide:
-
-  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
-
-    If you don't know what this means, type the following:
-      - <escape key>
-      - :
-      - Tutor
-      - <enter key>
-
-    (If you already know the Neovim basics, you can skip this step.)
 
   Once you've completed that, you can continue working through **AND READING** the rest
   of the kickstart init.lua.
@@ -85,7 +74,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -215,15 +204,11 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+
+  -- ==================================================================================
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
-  -- NOTE: Plugins can also be added by using a table,
-  -- with the first argument being the link and the following
-  -- keys can be used to configure plugin behavior/loading/etc.
-  --
-  -- Use `opts = {}` to force a plugin to be loaded.
-
+  -- ==================================================================================
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
@@ -260,6 +245,7 @@ require('lazy').setup({
   -- after the plugin has been loaded:
   --  config = function() ... end
 
+  -- ==================================================================================
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
@@ -283,13 +269,32 @@ require('lazy').setup({
     end,
   },
 
-  -- NOTE: Plugins can specify dependencies.
-  --
-  -- The dependencies are proper plugin specifications as well - anything
-  -- you do for a plugin at the top level, you can do for a dependency.
-  --
-  -- Use the `dependencies` key to specify the dependencies of a particular plugin
+  -- ==================================================================================
+  --{
+  --  'nvim_comment',
+  --  url = 'ghttps://github.com/terrortylor/nvim-comment.git',
+  -- Linters prefer comment and line to have a space in between markers
+  --  marker_padding = true,
+  -- should comment out empty or whitespace only lines
+  --comment_empty = true,
+  -- trim empty comment whitespace
+  --comment_empty_trim_whitespace = true,
+  -- Should key mappings be created
+  --create_mappings = true,
+  -- Normal mode mapping left hand side
+  --line_mapping = 'gcc',
+  -- Visual/Operator mapping left hand side
+  --operator_mapping = 'gc',
+  -- text object mapping, comment chunk,,
+  --comment_chunk_text_object = 'ic',
+  -- Hook function to call before commenting takes place
+  --hook = nil,
+  --},
 
+  -- The dependencies are proper plugin specifications as well - anything
+  --   you do for a plugin at the top level, you can do for a dependency.
+  -- Use the `dependencies` key to specify the dependencies of a particular plugin
+  -- ==================================================================================
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
@@ -395,6 +400,7 @@ require('lazy').setup({
     end,
   },
 
+  -- ==================================================================================
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -588,7 +594,6 @@ require('lazy').setup({
       --
       --  You can press `g?` for help in this menu.
       require('mason').setup()
-
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -596,7 +601,6 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
-
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)
@@ -612,6 +616,7 @@ require('lazy').setup({
     end,
   },
 
+  -- ==================================================================================
   { -- Autoformat
     'stevearc/conform.nvim',
     lazy = false,
@@ -649,6 +654,7 @@ require('lazy').setup({
     },
   },
 
+  -- ==================================================================================
   {
     'nvim-tree/nvim-tree.lua',
     keys = {
@@ -656,6 +662,7 @@ require('lazy').setup({
     },
   },
 
+  -- ==================================================================================
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -767,6 +774,7 @@ require('lazy').setup({
     end,
   },
 
+  -- ==================================================================================
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
@@ -785,9 +793,11 @@ require('lazy').setup({
     end,
   },
 
+  -- ==================================================================================
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
+  -- ==================================================================================
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -825,6 +835,8 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+
+  -- ==================================================================================
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -867,12 +879,14 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+
+  require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  --require 'nvim_comment',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -902,7 +916,9 @@ require('lazy').setup({
   },
 })
 
-require('nvim-tree').setup {}
+-- require('nvim-tree').setup {}
+vim.cmd 'command! Tree NvimTreeToggle'
+-- require('nvim_comment').setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
