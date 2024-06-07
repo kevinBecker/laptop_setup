@@ -11,8 +11,14 @@ link_home .vimrc
 link_home .zprofile
 link_home .pablo_names
 
+rm -f ~/.config/nvim/init.lua
+ln -s ${DOTFILES}/nvim_init.lua ~/.config/nvim/init.lua
+
 rm -f $ZSH/custom/themes/kevinbecker1.zsh-theme
 ln -s ${DOTFILES}/kevinbecker1.zsh-theme $ZSH/custom/themes/kevinbecker1.zsh-theme
+
+
+
 
 # if [[ "$(uname)" == "Linux" ]]; then
     rm -f ~/Library/Application\ Support/Code/User/settings.json

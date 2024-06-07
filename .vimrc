@@ -3,6 +3,14 @@
 
 colorscheme default
 
+" ALE configuration:
+" In ~/.vim/vimrc, or somewhere similar.
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'bash': ['shellcheck'],
+\}
+
+
 
 " Vi-compatibility mode and enables useful Vim functionality.
 set nocompatible
