@@ -58,6 +58,10 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
   zsh-autosuggestions
+  emoji
+  per-directory-history
+  thefuck
+
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -86,3 +90,5 @@ fi
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 export DISPLAY=:0
+
+eval $(thefuck --alias)
