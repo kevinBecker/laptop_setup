@@ -30,4 +30,11 @@ source "$DOTFILES"/.zshrc
 #------------------------------------------------------
 #  Export remaining variables
 #-------------------------------------------------------
+# Remove duplicates
+NEW_PATH=$( python3 -c "import os; path = os.environ['PATH'].split(':'); print(':'.join(sorted(set(path), key=path.index)))" )
+if [[ $? -eq 0 ]]; then
+  PATH="$NEW_PATH"
+fi
+
 export PATH
+
