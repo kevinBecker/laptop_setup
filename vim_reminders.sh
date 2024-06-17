@@ -39,6 +39,15 @@ cecho() {
 # ---------------------------------------------------
 bold_cecho "Reminders of vim shortcuts:\n"  1
 
+cecho "\t- Copy word" 2 
+cecho "\t- viwy (or bye)" 3
+echo ""
+cecho "\t- Paste over word" 2 
+cecho "\t- viwp" 3
+echo ""
+cecho "\t- Undo, redo" 2 
+cecho "\t- u, :redo" 3
+echo ""
 cecho "\t- Move to w,e,$,0 " 2
 cecho "\t- next word, end of word, eol, bol" 3
 echo ""
