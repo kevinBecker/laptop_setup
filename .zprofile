@@ -2,24 +2,32 @@
 
 if [[ "$(uname)" == "Darwin" ]]; then
     # Do something under Mac OS X platform
-    PATH=/opt/homebrew/sbin:$PATH
-    PATH=/opt/homebrew/bin:$PATH
+    PATH="/opt/homebrew/sbin:${PATH}"
+    PATH="/opt/homebrew/bin:${PATH}"
 fi
 
-source ~/setup/.zsh_defaults
-source ~/setup/.aliases
-source ~/setup/.moos_setup
-source ~/setup/heron_aliases
-source ~/setup/reminders.sh
+############################################################
+# Set enviornment
+# https://superuser.com/questions/789448/choosing-between-bashrc-profile-bash-profile-etc
+############################################################
 
-PATH+=":${HOME}/.bin"
+# Sets requried variables. Should be a shell (not bash or zsh) script, 
+# so everything else can run this. Includes machine specific items/locaitons.
+source ~/.profile
 
-alias myip='ifconfig en0 |  grep inet'
-alias cdset='cd ~/setup'
+# Defaults which are standard across all my machines. 
+# This should then call everything else. No output here.
+#   source $ZSH/oh-my-zsh.sh
+#   source $DOTFILES/.aliases
+#   source $DOTFILES/.moos_setup
+#       source "${CARLO_DIR_LOCATION}/monte_info" 
+source "$DOTFILES"/.zshrc   
+
+# Print out reminders of aliases and other stuff
+#   adds its own reminder aliases.
+. $DOTFILES/reminders.sh    
 
 #------------------------------------------------------
-# Useful setting for MacOS to prevent zsh advertisement
+#  Export remaining variables
 #-------------------------------------------------------
-export BASH_SILENCE_DEPRECATION_WARNING=1
-
 export PATH

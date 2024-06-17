@@ -1,11 +1,12 @@
 #echo "Sourcing .moos_setup"
+# sourced by .zshrc
+
+source $DOTFILES/heron_aliases
+
 
 #---------------------------------
 # MOOS IVP Path variables
 #---------------------------------
-
-export MOOS_IVP_KB_BASE="${HOME}/research/moos-ivp-kevinbecker"
-export MOOS_IVP_SOURCE_TREE_BASE="${HOME}/research/moos-ivp/trunk"
 
 PATH=$PATH:${MOOS_IVP_SOURCE_TREE_BASE}/bin
 PATH=$PATH:${MOOS_IVP_SOURCE_TREE_BASE}/scripts
@@ -23,23 +24,16 @@ PATH=$PATH:${MOOS_IVP_KB_BASE}/scripts
 # PATH=$PATH:~/moos-ivp-swarm/scripts
 export PATH
 
-#--------------------------------
-# monte-moos Other Vars
-#---------------------------------
-export MONTE_MOOS_BASE_DIR="${HOME}/research/monte-moos"       # BOTH
-export PATH="${PATH}:${MONTE_MOOS_BASE_DIR}/global_scripts"    # BOTH
-export CARLO_DIR_LOCATION="${HOME}/research/kevin00_carlo_dir" # BOTH
-source ${CARLO_DIR_LOCATION}/monte_info                        # BOTH
 
 #--------------------------------
 #MOOS IVP Other Vars
 #---------------------------------
 
 # IVP_IMAGE_DIRS
-IVP_IMAGE_DIRS=~/pavlab_map_images/mit
-IVP_IMAGE_DIRS+=:~/pavlab_map_images/popolopen
-IVP_IMAGE_DIRS+=:~/pavlab_map_images/sydney_regatta
-IVP_IMAGE_DIRS+=:~/pavlab_map_images/oak_island
+IVP_IMAGE_DIRS=~/research/pavlab_map_images/mit
+IVP_IMAGE_DIRS+=:~/research/pavlab_map_images/popolopen
+IVP_IMAGE_DIRS+=:~/research/pavlab_map_images/sydney_regatta
+IVP_IMAGE_DIRS+=:~/research/pavlab_map_images/oak_island
 export IVP_IMAGE_DIRS
 
 # IVP_BEHAVIOR_DIRS
@@ -54,7 +48,6 @@ export IVP_BEHAVIOR_DIRS
 #---------------------------------
 # MOOS IVP Shortcuts
 #---------------------------------
-
 #export path_ps="~/moos-ivp-pavlab/pavlab_shorts"
 #eval "source $path_ps/setup_pavlab_shorts"
 # source /Users/kevinbecker/moos-ivp-aquaticus/trunk/missions/jervis-2023/aliases.txt
@@ -113,12 +106,6 @@ alias relaunch='ktm; ./clean.sh; ./launch.sh'
 alias pingoe='ping oceanai.mit.edu'
 
 #-------------------------------------------------------
-# Set your Shell Prompt
-#-------------------------------------------------------
-
-export PROMPT_DIRTRIM=3
-
-#-------------------------------------------------------
 # Utility for examining the PATH variable line by line
 #-------------------------------------------------------
 mypath() {
@@ -173,7 +160,7 @@ if [[ "$(hostname)" == "oceanai" ]]; then
     done
   }
 fi
-#-------------------------------------------------------
-# Useful setting for MacOS to prevent zsh advertisement
-#-------------------------------------------------------
-export BASH_SILENCE_DEPRECATION_WARNING=1
+
+
+# Source monte-info for monte-MOOS
+. "${CARLO_DIR_LOCATION}/monte_info"                        # BOTH
