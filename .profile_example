@@ -11,8 +11,6 @@ export DOTFILES="${HOME}/setup"
 # Add this to the path variable
 export PATH="${PATH}:${HOME}/.bin"
 
-# Useful setting for MacOS to prevent zsh advertisement
-export BASH_SILENCE_DEPRECATION_WARNING=1 
 
 
 ############################################################
@@ -30,5 +28,8 @@ export PATH="${PATH}:${MONTE_MOOS_BASE_DIR}/global_scripts"    # BOTH
 # Set this profile to the example profile in the DOTFILES
 rm -f "$DOTFILES"/.profile_example
 cp ~/.profile "$DOTFILES"/.profile_example
+
+# Useful setting for MacOS to prevent zsh advertisement
+export BASH_SILENCE_DEPRECATION_WARNING=1 
 
 
