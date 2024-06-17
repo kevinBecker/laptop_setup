@@ -5,7 +5,7 @@ colorscheme default
 
 " ALE configuration:
 " In ~/.vim/vimrc, or somewhere similar.
-let g:ale_fixers = {
+let gale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'bash': ['shellcheck'],
 \}
@@ -69,7 +69,7 @@ nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 set noerrorbells visualbell t_vb=
 
 " Enable mouse support
-set mouse=a
+set mouse=nvi
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
