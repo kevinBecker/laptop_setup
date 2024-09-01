@@ -25,8 +25,6 @@ alias tg='tree -f | grep '
 alias hg='history | grep '
 alias vr='~/setup/vim_reminders.sh'
 # alias myip='echo "$(ifconfig | grep "inet " | grep -v "127.0.0.1" | awk "{print \$2}")"'
-alias sshap='ssh-add -t 432000 ~/.ssh/id_rsa_pab'
-alias sshhome='ssh kjbecker00@https://www.kjbecker00.duckdns.org -p 1025'
 alias thesis='cd ~/auv_lab/thesis/writing/thesis_doc ; git pull'
 
 alias myip='ifconfig en0 |  grep inet'
@@ -41,10 +39,10 @@ function mcd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-# Change working directory to the top-most Finder window location
-function cdf() { # short for `cdfinder`
-	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
-}
+# # Change working directory to the top-most Finder window location
+# function cdf() { # short for `cdfinder`
+# 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
+# }
 
 function rb() { # short for rebuild
     local current_dir=$(pwd)

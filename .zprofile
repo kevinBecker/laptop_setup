@@ -38,3 +38,6 @@ fi
 
 export PATH
 
+
+# Created by `pipx` on 2024-08-17 16:11:49
+export PATH="$PATH:/Users/kjbecker00/.local/bin"

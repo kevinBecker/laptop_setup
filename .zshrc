@@ -44,8 +44,8 @@ setopt HIST_IGNORE_SPACE
 plugins=(git
   zsh-autosuggestions
   emoji
-  per-directory-history
-  thefuck
+  #per-directory-history
+  #thefuck
 
 )
 
@@ -68,7 +68,6 @@ export DISPLAY=:0
 ############################################################
 # Setup of tf
 ############################################################
-eval $(thefuck --alias)
 
 
 ############################################################
@@ -82,4 +81,9 @@ source $DOTFILES/.moos_setup
 # Useful setting for MacOS to prevent zsh advertisement
 #-------------------------------------------------------
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+
+# Created by `pipx` on 2024-08-17 16:11:49
+export PATH="$PATH:/Users/kjbecker00/.local/bin"
+source <(kubectl completion zsh)
 
